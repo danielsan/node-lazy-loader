@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/danielsan/node-lazy-loader.git"
   },
-  "keywords": ["nodejs", "packages"],
+  "keywords": [
+    "nodejs",
+    "packages"
+  ],
   "author": "Daniel Santana <git@danielsantana.net>",
   "license": "MIT",
   "bugs": {
