@@ -1,0 +1,20 @@
+{
+  "name": "@danielsan/node-lazy-loader",
+  "version": "0.0.0",
+  "description": "A Package for NPM Packages! Avoid unnecessary IO and save memory by allowing your users to load only the code they want",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsan/node-lazy-loader.git"
+  },
+  "keywords": ["nodejs", "packages"],
+  "author": "Daniel Santana <git@danielsantana.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielsan/node-lazy-loader/issues"
+  },
+  "homepage": "https://github.com/danielsan/node-lazy-loader#readme"
+}
