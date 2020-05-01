@@ -1,6 +1,6 @@
 {
   "name": "@danielsan/node-lazy-loader",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Package for NPM Packages! Avoid unnecessary IO and save memory by allowing your users to load only the code they want",
   "main": "index.js",
   "scripts": {
