@@ -39,7 +39,7 @@ module.exports = {
 
 ### Proposed Solution
 ```js
-const lazy = require('@danielsan/node-lazy-loader')
+const lazy = require('@danielsan/node-lazy-loader')(module)
 
 module.exports = {
   get feature1 () { lazy(this, 'feature1', './lib/feature1') },
@@ -55,7 +55,7 @@ By using getters the request will only happen when the property is read and this
 For example:
 ```js
 // your-module index.js
-const lazy = require('@danielsan/node-lazy-loader')
+const lazy = require('@danielsan/node-lazy-loader')(module)
 
 module.exports = {
   get feature1 () {
@@ -67,12 +67,17 @@ module.exports = {
 
 ```js
 // app index.js
-const module = require('your-module')
+const yourMod = require('your-module')
 
 // the following line when executed will print 'reading feature1' then return the value
-const a = module.feature1
+const a = yourMod.feature1
 
 // the following line will only return the value since it is not longer a getter but a property
-const b = module.feature1
+const b = yourMod.feature1
 ```
 
+### Security
+If you are not comfortable with passing ```module``` to a 3rd-party function you can use it as follows:
+```js
+const lazyCall = require('@danielsan/node-lazy-loader')({ require: module.require })
+```

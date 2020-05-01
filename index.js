@@ -1,4 +1,4 @@
-module.exports = (o, property, file = property, subProperty) =>
+module.exports = m => (o, property, file = property, subProperty) =>
   Object.defineProperty(o, property, {
-    value: subProperty == null ? require(file) : require(file)[subProperty]
+    value: subProperty == null ? m.require(file) : m.require(file)[subProperty]
   })[property]
